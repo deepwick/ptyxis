@@ -18,11 +18,12 @@ cp deepwick.palette "${XDG_DATA_HOME:-$HOME/.local/share}/org.gnome.Ptyxis/palet
 Or run `ptyxis --import-palette deepwick.palette`, which copies it to the
 same directory (it refuses to overwrite an existing file).
 
-For the Flathub build, run
-`flatpak run app.devsuite.Ptyxis --import-palette deepwick.palette`, and use
-`flatpak run --command=gsettings app.devsuite.Ptyxis` in place of `gsettings`
-below. (Flatpak steps follow Ptyxis 50.1's source and the Flathub manifest;
-they were not tested.)
+For the Flathub build (`app.devsuite.Ptyxis`), run
+`flatpak run app.devsuite.Ptyxis --import-palette deepwick.palette`, which
+copies it to `~/.var/app/app.devsuite.Ptyxis/data/app.devsuite.Ptyxis/palettes/`.
+Use `flatpak run --command=gsettings app.devsuite.Ptyxis` in place of
+`gsettings` below; the schema names stay `org.gnome.Ptyxis`. (Flatpak steps
+follow Ptyxis 50.1's source and the Flathub manifest; they were not run.)
 
 ## Activate
 
